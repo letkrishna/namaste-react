@@ -1,19 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = 
-React.createElement("div",{id:"parent"},[
-React.createElement("div", {id:"child", key:"child"},
-[React.createElement("h1",{key:"heading-1"},"I am H1 tag"),
-React.createElement("h2",{key:"heading-2"},"I am H2 tag")]
-)
+// Create a React element
+const heading = React.createElement("h1", 
+{ id: "heading" }, 
+"Namaste React"
+);
 
-
-]);
-
+// Get the root element from the DOM
 const root = ReactDOM.createRoot(document.getElementById("root"));
+// Render the React element into the root element
+root.render(heading);
 
-root.render(parent);
-
-console.log(parent);
-//console.log(root.render());
